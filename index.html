@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapnil Damate | Technical Program Manager & Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Swapnil Damate - Technical Program Manager & Software Engineer specializing in Cloud, AI, and Agile Leadership.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0f172a', // Slate 900
+                            800: '#1e293b', // Slate 800
+                            card: '#1e293b',
+                        },
+                        brand: {
+                            blue: '#3b82f6', // Blue 500
+                            cyan: '#22d3ee', // Cyan 400
+                            purple: '#a855f7', // Purple 500
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark-900 text-slate-200 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
+
+    <!-- Background Glow Effects -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-0 left-1/4 w-96 h-96 bg-brand-blue/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob">
+        </div>
+        <div
+            class="absolute top-0 right-1/4 w-96 h-96 bg-brand-purple/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-32 left-1/3 w-96 h-96 bg-brand-cyan/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 top-0 start-0 border-b border-white/5 bg-dark-900/80 backdrop-blur-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse group">
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap text-white group-hover:text-brand-cyan transition-colors">SD</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-white/10 focus:outline-none"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/10 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li>
+                        <a href="#about"
+                            class="block py-2 px-3 text-white bg-brand-blue rounded md:bg-transparent md:text-brand-cyan md:p-0"
+                            aria-current="page">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-brand-cyan md:p-0 transition-colors">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#certifications"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-brand-cyan md:p-0 transition-colors">Certifications</a>
+                    </li>
+                    <li>
+                        <a href="#projects"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-brand-cyan md:p-0 transition-colors">Beyond
+                            Code</a>
+                    </li>
+                    <li class="flex items-center space-x-4 ml-4 pl-4 border-l border-white/20">
+                        <a href="https://www.linkedin.com/in/swapnildamate/" target="_blank"
+                            class="text-gray-300 hover:text-[#0077b5] transition-colors text-xl" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://medium.com/" target="_blank"
+                            class="text-gray-300 hover:text-white transition-colors text-xl" title="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center relative pt-16">
+        <div class="text-center z-10 px-4 max-w-4xl mx-auto">
+            <p class="text-brand-cyan mb-4 font-medium tracking-wider animate-fade-in-up">HELLO, I'M</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                Swapnil Anil Damate
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-gray-400 mb-8 font-light animate-fade-in-up"
+                style="animation-delay: 0.2s;">
+                Technical Program Manager <span class="text-brand-blue">&</span> Software Engineer
+            </h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+                style="animation-delay: 0.3s;">
+                Driving 20% release acceleration and optimizing cloud-native architectures. I bridge the gap between
+                engineering complexity and strategic product delivery.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 animate-fade-in-up"
+                style="animation-delay: 0.4s;">
+                <a href="Swapnil_Damate_Resume_TPM.pdf" download
+                    class="w-full md:w-auto px-8 py-3 bg-brand-blue hover:bg-blue-600 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-file-download mr-2"></i> Download Resume
+                </a>
+                <a href="mailto:damateswapnil19@gmail.com"
+                    class="w-full md:w-auto px-8 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-semibold rounded-lg transition-all backdrop-blur-sm">
+                    <i class="fas fa-envelope mr-2"></i> Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social / Writing Hub -->
+    <section class="max-w-4xl mx-auto px-4">
+        <div class="glass-card rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold text-white mb-2">Connect & Read</h3>
+                <p class="text-gray-400">Explore my professional journey and latest technical articles.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/swapnildamate/" target="_blank"
+                    class="flex items-center gap-3 px-6 py-3 bg-[#0077b5]/10 hover:bg-[#0077b5]/20 text-[#0077b5] border border-[#0077b5]/20 rounded-lg transition-all group">
+                    <i class="fab fa-linkedin text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="font-semibold">LinkedIn</span>
+                </a>
+                <a href="https://medium.com/" target="_blank"
+                    class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-lg transition-all group">
+                    <i class="fab fa-medium text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="font-semibold">Medium</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills" class="max-w-screen-xl mx-auto px-4 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-4">
+            <span class="w-2 h-12 bg-brand-cyan rounded-full"></span>
+            Technical & Leadership Arsenal
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Program Management -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-purple/30 transition-colors">
+                <div class="flex items-center gap-3 mb-6 text-brand-purple">
+                    <i class="fas fa-tasks text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">Program Management</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Agile
+                        (Scrum/Kanban)</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">SDLC</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">CI/CD
+                        Pipelines</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">System
+                        Design</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">OKRs</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Risk
+                        Management</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Cross-functional
+                        Leadership</span>
+                </div>
+            </div>
+
+            <!-- Cloud & AI -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-cyan/30 transition-colors">
+                <div class="flex items-center gap-3 mb-6 text-brand-cyan">
+                    <i class="fas fa-cloud text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">Cloud & AI</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">GCP</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">AWS</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Azure</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Generative
+                        AI</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">ML
+                        Lifecycle</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">DevOps</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Service
+                        Observability</span>
+                </div>
+            </div>
+
+            <!-- Languages & Data -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-blue/30 transition-colors">
+                <div class="flex items-center gap-3 mb-6 text-brand-blue">
+                    <i class="fas fa-code text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">Languages & Data</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Python</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">SQL</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Bash/Shell</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Java</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Kotlin</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">JavaScript</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">API
+                        Integration</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="glass-card p-8 rounded-2xl hover:border-emerald-400/30 transition-colors">
+                <div class="flex items-center gap-3 mb-6 text-emerald-400">
+                    <i class="fas fa-tools text-2xl"></i>
+                    <h3 class="text-xl font-bold text-white">Tools</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">JIRA</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Confluence</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Git</span>
+                    <span
+                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Telemetry
+                        Frameworks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="max-w-screen-xl mx-auto px-4 py-20 relative">
+        <div
+            class="absolute right-0 top-1/4 w-72 h-72 bg-brand-blue/10 rounded-full blur-3xl mix-blend-screen opacity-20 pointer-events-none">
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center justify-end gap-4">
+            Certified Expertise
+            <span class="w-2 h-12 bg-brand-purple rounded-full"></span>
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- PMP -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400 shrink-0">
+                    <i class="fas fa-certificate text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">PMP®</h4>
+                    <p class="text-sm text-gray-400">Project Management Institute</p>
+                </div>
+            </div>
+
+            <!-- Google PM -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                    <i class="fab fa-google text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">Project Mgmt Professional</h4>
+                    <p class="text-sm text-gray-400">Google</p>
+                </div>
+            </div>
+
+            <!-- Google Cloud -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                    <i class="fab fa-google text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">Google Cloud Arcade</h4>
+                    <p class="text-sm text-gray-400">Facilitator & Legend 2025</p>
+                </div>
+            </div>
+
+            <!-- Security Google Cloud -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">Security in Google Cloud</h4>
+                    <p class="text-sm text-gray-400">Google Cloud</p>
+                </div>
+            </div>
+
+            <!-- AWS Fundamentals -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400 shrink-0">
+                    <i class="fab fa-aws text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">AWS Fundamentals</h4>
+                    <p class="text-sm text-gray-400">Amazon Web Services</p>
+                </div>
+            </div>
+
+            <!-- Self Driving Cars -->
+            <div class="glass-card p-6 rounded-xl flex items-start gap-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+                    <i class="fas fa-car text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-1">Self-Driving Cars</h4>
+                    <p class="text-sm text-gray-400">Specialization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond the Code -->
+    <section id="projects" class="max-w-screen-xl mx-auto px-4 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-4">
+            <span class="w-2 h-12 bg-brand-cyan rounded-full"></span>
+            Beyond the Code
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Patents -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-50">
+                    <i
+                        class="fas fa-lightbulb text-6xl text-white/5 group-hover:text-brand-cyan/20 transition-colors"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Cloud-Native Patents</h3>
+                <p class="text-gray-400 mb-6">Secured competitive advantage by directing the invention disclosure
+                    process for two critical cloud-native product IP patents.</p>
+                <div class="text-brand-cyan font-mono text-sm">#Innovation #IP</div>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-50">
+                    <i
+                        class="fab fa-google-play text-6xl text-white/5 group-hover:text-brand-purple/20 transition-colors"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Mobile Ecosystem</h3>
+                <p class="text-gray-400 mb-6">Engineered and launched 4 mobile applications on Google Play Console,
+                    achieving over <span class="text-white font-bold">200,000+ installs</span> globally.</p>
+                <div class="text-brand-purple font-mono text-sm">#Android #Scale</div>
+            </div>
+
+            <!-- Leadership -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-50">
+                    <i class="fas fa-gavel text-6xl text-white/5 group-hover:text-brand-blue/20 transition-colors"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Technical Jury Member</h3>
+                <p class="text-gray-400 mb-6">Appointed by Govt. of India & UNESCO as a Technical Jury Member (2022-24)
+                    to evaluate national innovations.</p>
+                <div class="text-brand-blue font-mono text-sm">#Leadership #Impact</div>
+            </div>
+
+            <!-- Awards -->
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-50">
+                    <i class="fas fa-trophy text-6xl text-white/5 group-hover:text-yellow-400/20 transition-colors"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Stellar Contribution</h3>
+                <p class="text-gray-400 mb-6">Recognized as Top 1% Nationally. Delivering critical projects 45% ahead of
+                    schedule and increasing client satisfaction by 25%.</p>
+                <div class="text-yellow-400 font-mono text-sm">#Excellence #Performance</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800/50 backdrop-blur-sm border-t border-white/5 py-8 mt-12">
+        <div class="max-w-screen-xl mx-auto text-center text-gray-400">
+            <p>&copy; 2026 Swapnil Anil Damate. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with code, coffee, and care.</p>
+            <div class="flex justify-center gap-6 mt-6">
+                <a href="https://www.linkedin.com/in/swapnildamate/" target="_blank"
+                    class="hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://medium.com/" target="_blank" class="hover:text-white transition-colors"><i
+                        class="fab fa-medium text-xl"></i></a>
+                <a href="mailto:damateswapnil19@gmail.com" class="hover:text-white transition-colors"><i
+                        class="fas fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
